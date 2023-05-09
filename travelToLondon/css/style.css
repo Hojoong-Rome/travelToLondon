@@ -1,0 +1,414 @@
+@charset "utf-8";
+
+*{
+    margin: 0; padding: 0; border: 0; 
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+body{
+    font-family: 'Gothic A1', sans-serif;
+    color: #fff;
+    background-color: #000;
+}
+
+#header{
+    width: 100%; height: 100px;
+    background-color: transparent;
+}
+.gnb{
+    display: flex;
+    justify-content: end;
+    position: fixed;
+    top: 0;
+    right: 0;
+    font-size: 20px;
+    font-weight: bold;
+    z-index: 9999;
+    margin-top: 20px;
+}
+.gnb li{
+    margin-right: 60px;
+}
+.gnb li a:hover{
+    color: lightslategrey;
+    text-decoration: underline;
+}
+#section0{
+    background-image: url(../img/bgimg1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#section1{
+    background-image: url(../img/bgimg2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#section2{
+    background-image: url(../img/bgimg3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#section3{
+    background-image: url(../img/bgimg4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#section4{
+    display: none;
+}
+.textBox h1{
+    padding-bottom: 20px;
+}
+.textBox{
+    margin-left: 50px;
+    margin-top: 35%;
+    box-sizing: border-box;
+}
+#fp-nav ul li a span{
+    background-color: #fff;
+}
+.subMain1{
+    background-image: url(../img/bgimg5.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.subMain1 .textBox{
+    margin-top: 30%;
+}
+.subText1{
+    width: 300px; height: 300px;
+    float: left;
+    margin-top: 100px;
+    margin-left: 100px;
+}
+.subText1 p{
+    margin-top: 30px;
+}
+.subText2{
+    width: 600px; height: 300px;
+    float: right;
+    margin-right: 100px;
+}
+.subText2 h1{
+    margin-bottom: 100px;
+}
+.subText2 p img{
+    width: 60px;
+    height: 40px;
+}
+.subMap{
+    margin-left: 100px;
+}
+.subImg{
+    width: 800px; height: 500px;
+    overflow: auto;
+    object-fit: cover;
+    float: right;
+    margin-right: 100px;
+}
+.subImg::-webkit-scrollbar{
+    width: 10px; height: 10px;
+}
+.subImg::-webkit-scrollbar-thumb{
+    background-color: navy;
+    border-radius: 5px;
+}
+.subImg::-webkit-scrollbar-track{
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, .3);
+}
+.subImg::-webkit-scrollbar-corner{
+    background-color: rgba(0, 0, 0, .3);
+}
+.backToMain{
+    float: right;
+    margin-right: 100px;
+    font-size: 20px;
+}
+.backToMain:hover{
+    text-decoration: underline;
+}
+.subMain2{
+    background-image: url(../img/bgimg6.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.subMain2 .textBox{
+    color: black;
+    font-size: 30px;
+}
+.subInner2Wrap1 .subText1{
+    float: none;
+    height: 150px;
+    padding-bottom: 0;
+    margin-top: 20px;
+}
+.subInner2Wrap1 .backToMain{
+    clear: both;
+    float: right;
+    margin-top: 20px;
+}
+.thumbnailGallery{
+    width: 900px; height: 410px;
+    margin-left: 100px;
+    margin-top: -20px;
+    margin: auto;
+}
+.thumbnailGallery ul{
+    width: 100%; height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+}
+.thumbnailGallery ul li{
+    width: 200px; height: 200px;
+}
+.thumbnailGallery ul li img{
+    width: 100%; height: 100%;
+    object-fit: cover;
+    vertical-align: top;
+    border-radius: 5px;
+    transition: .2s;
+}
+.thumbnailGallery ul li img:hover{
+    transform: scale(1.05);
+}
+.subMain3{
+    background-image: url(../img/bgimg7.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.subMain3 .textBox{
+    font-size: 30px;
+}
+.subInner3Wrap1 .subImg{
+    width: 1200px;
+    float: none;
+    margin-left: 100px;
+    display: flex;
+    justify-content: space-between;
+    height: 310px;
+}
+.subInner3Wrap1 .subImg img{
+    width: 600px; height: 300px;
+    object-fit: cover;
+    overflow: hidden;
+}
+.subInner3Wrap1 .subText1{
+    float: none;
+    height: 150px;
+    padding-bottom: 0;
+    margin-top: 0;
+}
+.modal_bg{
+    width: 100%; height: 100%;
+    position: fixed;
+    background-color: rgba(0, 0, 0, .5);
+    left: 0;
+    top: 0;
+    z-index: 9999;
+    display: none;
+}
+.modal_box{
+    width: 60%; 
+    padding: 10px;
+    background-color: #fff;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    z-index: 10000;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+.modal_box img{
+    width: 100%; height: 40vw;
+    object-fit: cover;
+    vertical-align: top;
+}
+.close_btn{
+    position: absolute;
+    right: 0;
+    top: -40px;
+    font-size: 30px;
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+}
+.subMap2{
+    display: none;
+}
+.logo a i:hover{
+    color: white;
+}
+
+@media screen and (min-width: 768px) and (max-width:1024px) {
+    .textBox{
+        margin-top: 50%;
+    }
+    .subMain1{
+        background-position: right;
+    }
+    .subInnerWrap1{
+        position: relative;
+    }
+    .subInnerWrap1 .subText1{
+        margin-left: 20px;
+    }
+    .subInnerWrap1 .subImg{
+        clear: both;
+        float: none;
+        position: absolute;
+        right: 15%;
+        top: 30%;
+        width: 300px; height: 300px;
+        overflow: hidden;
+        margin-right: 0;
+    }
+    .subInnerWrap1 .subImg img{
+        width: 300px; height: 300px;
+    }
+    .subMain2 .textBox{
+        color: white;
+        font-size: 25px;
+        margin-top: 20px;
+    }
+    .thumbnailGallery ul li{
+        width: 130px; height: 130px;
+    }
+    .thumbnailGallery{
+        width: 600px; height: 300px;
+    }
+    .textBox{
+        margin-top: 30%;
+    }
+    .subInner3Wrap1 .subText1{
+        margin-top: 10%;
+    }
+    .subInner3Wrap1 .subImg{
+        width: 600px;
+        margin-top: -10%;
+    }
+    .subInner3Wrap1 .subImg img{
+        width: 300px; height: 250px;
+    }
+    .subMap{
+        display: none;
+    }
+    .subInnerWrap2 .subText2{
+        height: 100px;
+    }
+    .subInnerWrap2 .subText2 h1{
+        margin-bottom: 10px;
+    }
+    .subMap2{
+        display: block;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #fp-nav{
+        display: none;
+    }
+    .gnb li{
+        margin-right: 25px;
+    }
+    #section0{
+        background-image: url(../img/mobile_bgimg_1.jpg);
+    }
+    #section1{
+        background-image: url(../img/mobile_bgimg_2.jpg);
+    }
+    #section2{
+        background-image: url(../img/mobile_bgimg_3.jpg);
+    }
+    #section3{
+        background-image: url(../img/mobile_bgimg_4.jpg);
+    }
+    .textBox{
+        margin-top: 0;
+    }
+    .textBox h1{
+        font-size: 24px;
+    }
+    .subMain1{
+        background-position: 60%;
+    }
+    .thumbnailGallery ul li{
+        width: 140px; height: 80px;
+    }
+    .thumbnailGallery{
+        width: 280px; height: 300px;
+        margin-top: -50px;
+        margin-bottom: 10px;
+    }
+    .subText1 h1{
+        font-size: 24px;
+    }
+    .subMain2{
+        background-image: url(../img/bgimgfishandchips.jpg);
+        background-position: center;
+    }
+    .subMain3{
+        background-position: 80%;
+    }
+    .subInner3Wrap1 .subImg{
+        width: 300px; height: 300px;
+        margin-left: 10px;
+        display: block;
+        margin-top: -50px;
+    }
+    .subInner3Wrap1 .subImg img{
+        width: 300px; height: 140px;
+    }
+    .subInnerWrap1 .subText1{
+        height: 100px;
+        position: absolute;
+        top: 5%;
+        left: -15%;
+    }
+    .subInnerWrap1 .subImg{
+        float: none;
+        clear: both;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 40%;
+        width: 300px; height: 300px;
+        overflow: hidden;
+        margin-right: 0;
+    }
+    .subInnerWrap1 .subImg img{
+        object-fit: cover;
+    }
+    .subInnerWrap2 .subText2{
+        width: 300px; height: 200px;
+        margin-bottom: -30px;
+        margin-right: 0;
+        float: none;
+        margin-left: 50%;
+        transform: translate(-50%);
+    }
+    .subInnerWrap2 .subText2 h1{
+        font-size: 20px;
+        margin-top: 80px;
+        margin-bottom: 30px;
+    }
+    .subMap{
+        display: none;
+    }
+    .subMap2{
+        display: block;
+        margin-left: 40%;
+        transform: translate(-50%);
+        margin-bottom: 20px;
+    }
+}
